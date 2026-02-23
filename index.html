@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jimmy – El sabor de las noches en Rosario</title>
+  <meta name="description" content="Jimmy, bar-restaurante en Pichincha, Rosario. Platos bien nuestros, 4.3★ y más de 3.500 reseñas. Reservá mesa o pedí online.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body class="bg-neutral-900 text-neutral-100 font-sans leading-relaxed">
+  <!-- NAV -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-neutral-900/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#hero" class="text-2xl font-bold tracking-tight text-amber-500">Jimmy</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#sobre" class="hover:text-amber-400">Sobre</a>
+        <a href="#platos" class="hover:text-amber-400">Platos</a>
+        <a href="#reseñas" class="hover:text-amber-400">Reseñas</a>
+        <a href="#ubicacion" class="hover:text-amber-400">Ubicación</a>
+      </nav>
+      <a href="tel:+543414397637" class="hidden md:inline-flex btn-cta">Reservar</a>
+      <button id="menuBtn" class="md:hidden text-neutral-100"><i data-lucide="menu"></i></button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="fixed inset-0 bg-neutral-900/95 backdrop-blur flex-col items-center justify-center gap-8 text-xl hidden">
+    <a href="#sobre" class="menu-link">Sobre</a>
+    <a href="#platos" class="menu-link">Platos</a>
+    <a href="#reseñas" class="menu-link">Reseñas</a>
+    <a href="#ubicacion" class="menu-link">Ubicación</a>
+    <a href="tel:+543414397637" class="btn-cta text-lg">Reservar</a>
+    <button id="closeMenu" class="absolute top-4 right-4"><i data-lucide="x"></i></button>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="h-screen relative flex items-center justify-center text-center">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1920&q=80" alt="Mesa con comida" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="relative z-10 max-w-3xl px-4">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Jimmy – El sabor de las noches en Rosario</h1>
+      <p class="text-lg md:text-2xl mb-8">Buena comida, buen ambiente y abierto hasta la 1 AM.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+543414397637" class="btn-cta">Reservar mesa</a>
+        <a href="#platos" class="btn-secondary">Ver carta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="section-title">Sobre Jimmy</h2>
+        <p class="mb-6">Punto clásico del barrio Pichincha donde la noche rosarina cobra sabor. Vení a juntarte con la barra, cenar bien y estirar la charla hasta tarde.</p>
+        <ul class="text-sm space-y-2">
+          <li><i data-lucide="star" class="inline-block text-amber-400"></i> 4.3 estrellas · Más de 3.585 reseñas</li>
+          <li><i data-lucide="tag" class="inline-block text-amber-400"></i> $10.000 – 30.000 ARS por persona</li>
+          <li><i data-lucide="clock" class="inline-block text-amber-400"></i> Abierto todos los días · Cierra 1 AM</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1547593897-1c662adf85e4?auto=format&fit=crop&w=800&q=80" alt="Interior cálido" class="rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <!-- PLATOS -->
+  <section id="platos" class="py-20 bg-neutral-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="section-title text-center mb-12">Platos destacados</h2>
+      <div id="dishGrid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="section-title text-center mb-12">Nuestros servicios</h2>
+      <div class="grid gap-8 sm:grid-cols-3 text-center">
+        <div class="service-card"><i data-lucide="knife-fork" class="icon"></i>Consumo en el lugar</div>
+        <div class="service-card"><i data-lucide="shopping-bag" class="icon"></i>Retiro en puerta</div>
+        <div class="service-card"><i data-lucide="car" class="icon"></i>Entrega sin contacto</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEÑAS -->
+  <section id="reseñas" class="py-20 bg-neutral-800">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="section-title mb-4">4.3 <span class="text-amber-400">★</span> · Más de 3.500 opiniones reales</h2>
+      <div id="reviews" class="mt-10 grid gap-8 md:grid-cols-3"></div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section id="ubicacion" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2 class="section-title">Encontranos</h2>
+        <p class="mb-4">Pichincha 1, S2000 Rosario, Santa Fe</p>
+        <p class="mb-6 font-medium"><a href="tel:+543414397637" class="hover:text-amber-400 underline">+54 341 439-7637</a></p>
+        <a href="https://www.google.com/maps/dir//Pichincha+1,+S2000+Rosario" target="_blank" rel="noopener" class="btn-secondary inline-block mb-6">Cómo llegar</a>
+        <p class="text-sm">Abierto todos los días · Cierra 1 AM</p>
+      </div>
+      <iframe class="w-full h-64 rounded-lg shadow-lg" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.885659416922!2d-60.64600018481006!3d-32.95117337990511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b653992e046c39%3A0x7f0a77e8458d731!2sPichincha%201%2C%20S2000%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1700000000000"></iframe>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" class="py-20 bg-neutral-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="section-title text-center mb-12">Galería</h2>
+      <div id="galleryGrid" class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta" class="py-20 text-center">
+    <h2 class="text-3xl md:text-5xl font-extrabold mb-8">Reservá tu mesa esta noche</h2>
+    <a href="tel:+543414397637" class="btn-cta mx-auto">Quiero mi mesa</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-neutral-900 py-10 text-center text-sm">
+    <p>Pichincha 1, Rosario · <a href="tel:+543414397637" class="underline hover:text-amber-400">+54 341 439-7637</a></p>
+    <p><a href="https://www.facebook.com" target="_blank" rel="noopener" class="underline hover:text-amber-400">Facebook</a> · Abierto todos los días hasta la 1 AM</p>
+    <p class="mt-4">&copy; <span id="year"></span> Jimmy. Todo Rosario sabe.</p>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/543414397637" class="fixed bottom-6 right-6 bg-green-500 p-3 rounded-full shadow-lg z-50 hover:scale-110 transition">
+    <i data-lucide="message-circle" class="text-white w-6 h-6"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="js/main.js"></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Jimmy",
+    "image":"https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=60",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Pichincha 1",
+      "addressLocality":"Rosario",
+      "postalCode":"S2000",
+      "addressRegion":"Santa Fe",
+      "addressCountry":"AR"
+    },
+    "telephone":"+54 341 439-7637",
+    "priceRange":"ARS 10000-30000",
+    "aggregateRating":{
+      "@type":"AggregateRating",
+      "ratingValue":"4.3",
+      "reviewCount":"3585"
+    },
+    "openingHours":"Mo-Su 11:00-01:00"
+  }
+  </script>
+</body>
+</html>

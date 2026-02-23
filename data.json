@@ -1,0 +1,56 @@
+{
+  "dishes": [
+    {
+      "name": "Papas Jimmy",
+      "image": "https://images.unsplash.com/photo-1602331144143-365f1b88e4da?auto=format&fit=crop&w=700&q=60",
+      "desc": "Papas crocantes con cheddar, panceta y el toque secreto de la casa."
+    },
+    {
+      "name": "Pizza Completa",
+      "image": "https://images.unsplash.com/photo-1601924638867-3ec0f3ca2f31?auto=format&fit=crop&w=700&q=60",
+      "desc": "Masa fina, salsa casera, muzza que se estira y mucho amor rosarino."
+    },
+    {
+      "name": "Milanesa",
+      "image": "https://images.unsplash.com/photo-1617196032705-67212e726021?auto=format&fit=crop&w=700&q=60",
+      "desc": "Grande como la tabla, con papas y limón. Clásico que no falla."
+    },
+    {
+      "name": "Panini",
+      "image": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=60",
+      "desc": "Pan crujiente, jamón, queso y vegetales grillados. Ideal para acompañar una buena charla."
+    },
+    {
+      "name": "Brownie",
+      "image": "https://images.unsplash.com/photo-1589307000250-baba723ab869?auto=format&fit=crop&w=700&q=60",
+      "desc": "Chocolate intenso, nueces y helado de crema: placer total."
+    },
+    {
+      "name": "Flan",
+      "image": "https://images.unsplash.com/photo-1546549039-973b24ce5a09?auto=format&fit=crop&w=700&q=60",
+      "desc": "Con dulce de leche a cucharada limpia, como debe ser."
+    },
+    {
+      "name": "Sidra",
+      "image": "https://images.unsplash.com/photo-1563371351-e53ebb744a43?auto=format&fit=crop&w=700&q=60",
+      "desc": "Bien fría, tirada y burbujeante. Chin chin."
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Martín R.",
+      "text": "La mejor milanesa que probé en Rosario. Atención de primera, vuelvo seguro.",
+      "rating": 5
+    },
+    {
+      "author": "Lucía P.",
+      "text": "El ambiente es ideal para una salida con amigas. Pedimos las Papas Jimmy y explotaron.",
+      "rating": 5
+    },
+    {
+      "author": "Ezequiel G.",
+      "text": "Buen precio, flan tremendo y la sidra a la temperatura justa. Recomendadísimo.",
+      "rating": 4
+    }
+  ]
+}
